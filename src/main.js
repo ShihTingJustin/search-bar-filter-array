@@ -48,4 +48,7 @@ function renderComments(comments) {
 
 ////// 請在以下區域進行修改 ///////
 
-renderComments(comments); // 有需要的話可以更動參數
+const filteredComments = comments.filter(
+  (comment) => comment.id !== badCommentId,
+);
+renderComments(filteredComments);
